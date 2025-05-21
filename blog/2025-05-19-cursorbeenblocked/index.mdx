@@ -1,0 +1,31 @@
+---
+slug: /cursor-blocked
+title: Cursor Extension 被 Microsoft 封鎖了
+tags: [Cursor]
+---
+自四月初開始，我注意到某些擴充套件的版本號被強制限制，無法升級。\
+經過多次嘗試，發現這是 Cursor 為應對來自 Microsoft 的封鎖所採取的權宜之計。\
+這場封鎖對 Cursor 使用者而言（包括我自己）無疑是一場災難。
+{/* truncate */}
+C++ 和 C# 的擴充套件無法正常運作，導致無法編譯，更遑論進行除錯。\
+這場風波在 [論壇](https://github.com/getcursor/cursor/issues/2976) 引發了熱烈討論，社群開始探討究竟是 Microsoft 的行為過於強硬，\
+還是 Cursor 當初選擇違反規章、使用反向代理的模式本身就是錯誤。\
+有人翻出 Microsoft 早在 2018 年就對擴充套件的使用設下限制，明確指出\
+僅限於官方的 Visual Studio Code 使用，並不允許在非官方的分支版本上運行。
+{/* truncate */}
+他們認為 Cursor 的開發者明知規定卻選擇忽視，導致今日的局面。\
+也有人認為 Microsoft 長期以開源之名，行封閉之實，藉此剝削社群，\
+這次的封鎖只是其一貫作風的延續。\
+Cursor 的開發團隊中間出面說明，表示即將推出立即的修復方案，並會提出長期的解決辦法。\
+但就目前來看這個風波仍會影響使用者好一陣子，只能用半殘品或不正統的方式進行開發。
+{/* truncate */}
+相較之下，Pylance 擴充套件僅是無法解決 FixtureFunction 的辨識錯誤，顯得微不足道。\
+覺得這件事的發生，對脫離 Vscode 的開發者來說是個警訊。\
+尤其我們作為付費使用者，當初承諾的功能被限縮甚至禁止時，這筆費用是否還值得？！\
+還有半年的費用要繳耶 ಥ_ಥ
+{/* truncate */}
+最後有興趣解決 Pylance 問題的，可以參考別人的解決辦法。
+:::warning
+每次 cursor 更新，就會強制復原，所以需要每次更新後再執行一次。
+:::
+[Fixing Python Syntax Highlighting in Cursor](https://substack.com/home/post/p-158197171)

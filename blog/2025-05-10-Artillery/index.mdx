@@ -1,0 +1,49 @@
+---
+slug: /artillery
+title: Artillery
+tags: [Test, Performance, Toolkit]
+---
+上週我在公司內部分享了壓力測試、負載測試以及 Artillery 的介紹，\
+身為主要開發後端的工程師，一般情況都先考慮
+1. 成果符合需求
+2. 可擴展性
+3. 測試覆蓋率
+
+但穩定性呢？在碰 infrastructure 之前，我只能摸著象腿說：噢！這很穩固！ \
+真實使用者遭運的情境跟開發者開發情境之間的距離，就像 docker 還沒出現前，\
+同事總說：疑，在我這邊都正常啊？！
+{/* truncate */}
+就在去年，團隊開發一個線上互動功能，stackholder 詢問： 系統有可能承受 30k 的連線可以同時在線運作不崩潰嗎？
+有人說我們怎麼模擬這麼多用戶？有人說情境該怎麼模擬才能貼齊現實？會議下來團隊對於「壓力測試怎麼做」、「要做出什麼結果」沒有一致的共識。
+這正是我主動舉辦分享會的起點。透過面向以下主題，我讓工程人員以及 QA 人員了解到：
+
+-  Stress test 與 load test 的區別
+-  與 stackholder 定義錨點 \
+└── Identify goals \
+└── Validate endpoints \
+└── Find bottleneck \
+└── Optimize system structure accordingly \
+    └── Modeling load \
+    ├── Load scenario creation \
+    └── Execution & Monitoring \
+-  工具選型 \
+	└── Artillery \
+	└── Grafana K6 
+
+核心目標只設定三點：
+- 🎯不讓人「聽不懂」
+- 🎯能讓人「回去做」
+- 🎯最好還能「分享出去」
+
+最終達到：
+- 🌟工程人員對測試有全面的認識
+- 🌟QA人員對工具選型廣度的擴增，不再手動設計腳本、撰寫情境
+- 🌟馬上可複用練習的程式碼與腳本
+
+但壓力測試永遠不會結束，總會預防著災難提早找上我們，所以結束之際我提出了再精進的項目：
+- 🚀 結合 Github Action 做指定環境壓測，減低人力介入/驅動
+- 🚀 上傳 Logs 到 AWS CloudWatch 做追蹤、紀錄
+
+
+{/* truncate */}
+

@@ -1,0 +1,24 @@
+React:
+  label: React
+  permalink: /react
+  description: React tag description
+
+Test:
+  label: Test
+  permalink: /test
+  description: Test tag description
+
+Performance:
+  label: Performance
+  permalink: /performance
+  description: Performance tag description
+
+Toolkit:
+  label: Toolkit
+  permalink: /toolkit
+  description: Toolkit tag description
+
+Cursor:
+  label: Cursor
+  permalink: /cursor
+  description: Cursor tag description
