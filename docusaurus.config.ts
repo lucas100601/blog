@@ -5,8 +5,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-    title: "Logic Lumina",
-    tagline: "我想寫下的，不只是解法，也是那些「為什麼」",
+    title: "我在故我思",
+    tagline: "Das Sein des Daseins liegt in seiner Existenz",
     favicon: "img/favicon.ico",
 
     // Set the production url of your site here

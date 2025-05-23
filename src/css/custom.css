@@ -40,20 +40,20 @@
 
 /* Navbar styles */
 .navbar {
-  background-color: #7cb5eb; /* User's sky blue for light mode */
+  background-color: #79cef0; /* New Lighter Sky Blue for light mode navbar & footer */
 }
 
 /* Text color for navbar items in light mode */
 .navbar .navbar__item.navbar__link {
-  color: #ffffff; /* White text */
+  color: #000000; /* Black text */
 }
 .navbar .navbar__item.navbar__link:hover {
-  color: #e8e8e8; /* Slightly off-white for hover */
+  color: #333333; /* Dark grey for hover */
 }
 
 /* Dark mode navbar */
 [data-theme='dark'] .navbar {
-  background-color: #2a4058; /* Deep calming blue for dark mode */
+  background-color: #2a4058; /* Deep calming blue for dark mode navbar & footer */
 }
 
 /* Text color for navbar items in dark mode */
@@ -62,6 +62,33 @@
 }
 [data-theme='dark'] .navbar .navbar__item.navbar__link:hover {
   color: #ffffff; /* White for hover */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #79cef0; /* Match Lighter Sky Blue in light mode */
+}
+
+.footer .footer__copyright,
+.footer .footer__link-item {
+  color: #002D62; /* Dark navy for footer text/links in light mode */
+}
+
+.footer .footer__link-item:hover {
+  color: #004294; /* Slightly lighter navy for hover in light mode */
+}
+
+[data-theme='dark'] .footer {
+  background-color: #2a4058; /* Match dark mode navbar color */
+}
+
+[data-theme='dark'] .footer .footer__copyright,
+[data-theme='dark'] .footer .footer__link-item {
+  color: #e0e0e0; /* Light grey for footer text/links in dark mode */
+}
+
+[data-theme='dark'] .footer .footer__link-item:hover {
+  color: #ffffff; /* White for hover in dark mode */
 }
 
 /*
@@ -100,4 +127,32 @@ h1 {
 /* Additional style for active sidebar link to make it bolder */
 .menu__link--active {
   font-weight: 600; /* Semi-bold for active sidebar link */
+}
+
+/* Hero section styling */
+.hero.hero--primary {
+  background-color: #ffffff; /* White background for the hero section in light mode */
+  color: #000000; /* Black text for contrast on white background */
+}
+
+.hero.hero--primary .hero__title {
+  color: #222222; /* Dark grey for hero title */
+}
+
+.hero.hero--primary .hero__subtitle {
+  color: #555555; /* Medium grey for hero subtitle */
+}
+
+/* Dark mode hero section styling */
+[data-theme='dark'] .hero.hero--primary {
+  background-color: var(--ifm-background-color); /* Match the page background in dark mode */
+  color: #f5f5f5; /* Light text for contrast */
+}
+
+[data-theme='dark'] .hero.hero--primary .hero__title {
+  color: #ffffff; /* White hero title for dark mode */
+}
+
+[data-theme='dark'] .hero.hero--primary .hero__subtitle {
+  color: #cccccc; /* Lighter grey for hero subtitle in dark mode */
 }
