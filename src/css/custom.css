@@ -6,25 +6,98 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #a7c0d3;
+  --ifm-color-primary-dark: #98b3c7;
+  --ifm-color-primary-darker: #89a6bb;
+  --ifm-color-primary-darkest: #7a99af;
+  --ifm-color-primary-light: #b6cbdc;
+  --ifm-color-primary-lighter: #c5d6e5;
+  --ifm-color-primary-lightest: #d4e1ef;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Custom link color for better contrast in light mode */
+  --ifm-link-color: #4C6B85;
+  --ifm-link-hover-color: #3B546A; /* Darker for hover */
+
+  /* Enhance active sidebar link color for better distinction in light mode */
+  --ifm-menu-link-color-active: var(--ifm-color-primary-darkest); /* Use the darkest primary shade */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #7390ab;
+  --ifm-color-primary-dark: #66809a;
+  --ifm-color-primary-darker: #597089;
+  --ifm-color-primary-darkest: #4c6078;
+  --ifm-color-primary-light: #869fb5;
+  --ifm-color-primary-lighter: #98afbf;
+  --ifm-color-primary-lightest: #aac0ca;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* --ifm-code-background: #1e1e1e; */ /* Example: Dark mode code block background */
+  /* You might want to define a specific link color for dark mode if needed */
+  /* --ifm-link-color: var(--ifm-color-primary-light); */
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #7cb5eb; /* User's sky blue for light mode */
+}
+
+/* Text color for navbar items in light mode */
+.navbar .navbar__item.navbar__link {
+  color: #ffffff; /* White text */
+}
+.navbar .navbar__item.navbar__link:hover {
+  color: #e8e8e8; /* Slightly off-white for hover */
+}
+
+/* Dark mode navbar */
+[data-theme='dark'] .navbar {
+  background-color: #2a4058; /* Deep calming blue for dark mode */
+}
+
+/* Text color for navbar items in dark mode */
+[data-theme='dark'] .navbar .navbar__item.navbar__link {
+  color: #f0f0f0; /* Light grey text */
+}
+[data-theme='dark'] .navbar .navbar__item.navbar__link:hover {
+  color: #ffffff; /* White for hover */
+}
+
+/*
+// 範例 3: 改變文章標題 (H1) 的字體大小與顏色
+h1 {
+  // font-size: 2.5rem; // 增加字體大小
+  // color: var(--ifm-color-primary-darkest); // 使用您定義的主要顏色中最深的一個
+}
+*/
+
+/*
+// 範例 4: 修改程式碼區塊 (Code Blocks) 的樣式
+// 改變背景顏色 (透過變數)
+// :root {
+//   --ifm-code-background: #fafafa;
+// }
+// [data-theme='dark'] {
+//   --ifm-code-background: #1e1e1e;
+// }
+
+// 或者直接覆寫樣式並加上圓角和邊框
+// div[class*="prism-code"] {
+//   border-radius: 8px;
+//   border: 1px solid var(--ifm-color-emphasis-300);
+// }
+
+// 改變被高亮行的背景色
+// :root {
+//   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05);
+// }
+// [data-theme='dark'] {
+//   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+// }
+*/
+
+/* Additional style for active sidebar link to make it bolder */
+.menu__link--active {
+  font-weight: 600; /* Semi-bold for active sidebar link */
 }
