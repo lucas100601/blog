@@ -73,7 +73,7 @@ const config: Config = {
             title: "",
             logo: {
                 alt: "My Site Logo",
-                src: "img/logo.svg",
+                src: "img/mar-wtbackground.gif",
             },
             items: [
                 // {
