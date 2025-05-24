@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://lucas100601.github.io/en/blog</id>
+    <title>我在故我思 Blog</title>
+    <updated>2025-05-19T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://lucas100601.github.io/en/blog"/>
+    <subtitle>我在故我思 Blog</subtitle>
+    <icon>https://lucas100601.github.io/en/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Cursor Extension 被 Microsoft 封鎖了]]></title>
+        <id>https://lucas100601.github.io/en/blog/cursor-blocked</id>
+        <link href="https://lucas100601.github.io/en/blog/cursor-blocked"/>
+        <updated>2025-05-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[自四月初開始，我注意到某些擴充套件的版本號被強制限制，無法升級。\]]></summary>
+        <content type="html"><![CDATA[<p>自四月初開始，我注意到某些擴充套件的版本號被強制限制，無法升級。<br>
+<!-- -->經過多次嘗試，發現這是 Cursor 為應對來自 Microsoft 的封鎖所採取的權宜之計。<br>
+<!-- -->這場封鎖對 Cursor 使用者而言（包括我自己）無疑是一場災難。</p>
+<!-- -->
+<p>C++ 和 C# 的擴充套件無法正常運作，導致無法編譯，更遑論進行除錯。<br>
+<!-- -->這場風波在 <a href="https://github.com/getcursor/cursor/issues/2976" target="_blank" rel="noopener noreferrer">論壇</a> 引發了熱烈討論，社群開始探討究竟是 Microsoft 的行為過於強硬，<br>
+<!-- -->還是 Cursor 當初選擇違反規章、使用反向代理的模式本身就是錯誤。<br>
+<!-- -->有人翻出 Microsoft 早在 2018 年就對擴充套件的使用設下限制，明確指出<br>
+<!-- -->僅限於官方的 Visual Studio Code 使用，並不允許在非官方的分支版本上運行。</p>
+<!-- -->
+<p>他們認為 Cursor 的開發者明知規定卻選擇忽視，導致今日的局面。<br>
+<!-- -->也有人認為 Microsoft 長期以開源之名，行封閉之實，藉此剝削社群，<br>
+<!-- -->這次的封鎖只是其一貫作風的延續。<br>
+<!-- -->Cursor 的開發團隊中間出面說明，表示即將推出立即的修復方案，並會提出長期的解決辦法。<br>
+<!-- -->但就目前來看這個風波仍會影響使用者好一陣子，只能用半殘品或不正統的方式進行開發。</p>
+<!-- -->
+<p>相較之下，Pylance 擴充套件僅是無法解決 FixtureFunction 的辨識錯誤，顯得微不足道。<br>
+<!-- -->覺得這件事的發生，對脫離 Vscode 的開發者來說是個警訊。<br>
+<!-- -->尤其我們作為付費使用者，當初承諾的功能被限縮甚至禁止時，這筆費用是否還值得？！<br>
+<!-- -->還有半年的費用要繳耶 ಥ_ಥ</p>
+<!-- -->
+<p>最後有興趣解決 Pylance 問題的，可以參考別人的解決辦法。</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>每次 cursor 更新，就會強制復原，所以需要每次更新後再執行一次。</p></div></div>
+<p><a href="https://substack.com/home/post/p-158197171" target="_blank" rel="noopener noreferrer">Fixing Python Syntax Highlighting in Cursor</a></p>]]></content>
+        <category label="Cursor" term="Cursor"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Artillery]]></title>
+        <id>https://lucas100601.github.io/en/blog/artillery</id>
+        <link href="https://lucas100601.github.io/en/blog/artillery"/>
+        <updated>2025-05-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[上週我在公司內部分享了壓力測試、負載測試以及 Artillery 的介紹，\]]></summary>
+        <content type="html"><![CDATA[<p>上週我在公司內部分享了壓力測試、負載測試以及 Artillery 的介紹，<br>
+<!-- -->身為主要開發後端的工程師，一般情況都先考慮</p>
+<ol>
+<li>成果符合需求</li>
+<li>可擴展性</li>
+<li>測試覆蓋率</li>
+</ol>
+<p>但穩定性呢？在碰 infrastructure 之前，我只能摸著象腿說：噢！這很穩固！ <br>
+<!-- -->真實使用者遭運的情境跟開發者開發情境之間的距離，就像 docker 還沒出現前，<br>
+<!-- -->同事總說：疑，在我這邊都正常啊？！</p>
+<!-- -->
+<p>就在去年，團隊開發一個線上互動功能，stackholder 詢問： 系統有可能承受 30k 的連線可以同時在線運作不崩潰嗎？
+有人說我們怎麼模擬這麼多用戶？有人說情境該怎麼模擬才能貼齊現實？會議下來團隊對於「壓力測試怎麼做」、「要做出什麼結果」沒有一致的共識。
+這正是我主動舉辦分享會的起點。透過面向以下主題，我讓工程人員以及 QA 人員了解到：</p>
+<ul>
+<li>Stress test 與 load test 的區別</li>
+<li>與 stackholder 定義錨點 <br>
+<!-- -->└── Identify goals <br>
+<!-- -->└── Validate endpoints <br>
+<!-- -->└── Find bottleneck <br>
+<!-- -->└── Optimize system structure accordingly <br>
+<!-- -->└── Modeling load <br>
+<!-- -->├── Load scenario creation <br>
+<!-- -->└── Execution &amp; Monitoring \</li>
+<li>工具選型 <br>
+<!-- -->└── Artillery <br>
+<!-- -->└── Grafana K6</li>
+</ul>
+<p>核心目標只設定三點：</p>
+<ul>
+<li>🎯不讓人「聽不懂」</li>
+<li>🎯能讓人「回去做」</li>
+<li>🎯最好還能「分享出去」</li>
+</ul>
+<p>最終達到：</p>
+<ul>
+<li>🌟工程人員對測試有全面的認識</li>
+<li>🌟QA人員對工具選型廣度的擴增，不再手動設計腳本、撰寫情境</li>
+<li>🌟馬上可複用練習的程式碼與腳本</li>
+</ul>
+<p>但壓力測試永遠不會結束，總會預防著災難提早找上我們，所以結束之際我提出了再精進的項目：</p>
+<ul>
+<li>🚀 結合 Github Action 做指定環境壓測，減低人力介入/驅動</li>
+<li>🚀 上傳 Logs 到 AWS CloudWatch 做追蹤、紀錄</li>
+</ul>
+]]></content>
+        <category label="Test" term="Test"/>
+        <category label="Performance" term="Performance"/>
+        <category label="Toolkit" term="Toolkit"/>
+    </entry>
+</feed>
