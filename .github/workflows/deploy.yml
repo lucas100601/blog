@@ -23,7 +23,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: lucas100601/lucas100601.github.io
+          external_repository: lucas100601/blog
           publish_branch: master
           publish_dir: ./build
           user_name: lucas100601
